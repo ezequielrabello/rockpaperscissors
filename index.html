@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/avatar_k.png" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>Frontend Mentor | Rock, Paper, Scissors</title>
+        <script type="module" src="./assets/script.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <img src="./images/logo.svg" class="logoImg" alt="Rock, Paper, Scissors">
+                <div class="scoreBox">
+                    <p>score <span id="score">0</span></p>
+                </div>
+            </header>
+
+            <div class="buttons-group">
+                <button class="choice rock" value="Rock" data-choice="rock" aria-label="rock"></button>
+                <button class="choice scissors" value="Scissors" data-choice="scissors" aria-label="scissors"></button>
+                <button class="choice paper" value="Paper" data-choice="paper" aria-label="paper"></button>
+            </div>
+
+
+
+            
+            <div class="fight invisible">
+                <p class="you-picked">You picked</p>
+                <div class="choice user-choice"></div>
+                <p class="house-picked">The house picked</p>
+                <div class="choice house-choice"></div>
+                <div class="result">
+                  <p id="result-label"></p>
+                  <button class="play-again">Play again</button>
+                </div>
+              </div>
+
+
+
+              
+            <div class="modalContainer invisible ">
+                  <h1>Rules</h1>
+                  <img src="./images/image-rules.svg" id="gameRulesImg" alt="Games Rules">
+                  <button type="button" class="modal-close-btn">
+                      <img src="./images/icon-close.svg" alt="">
+                    </button>
+            </div>
+                
+            <div class="button-wrapper">
+                <button type="button" class="rulesBtn">Rules</button>
+            </div>
+        </main>
+    </body>
+</html>
