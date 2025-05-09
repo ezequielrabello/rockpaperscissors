@@ -31,7 +31,7 @@ A clean and interactive Rock Paper Scissors game built with HTML, CSS, and JavaS
 
 ## 📸 Screenshots
 
-_Add screenshots here to show gameplay and responsiveness_
+![Screenshot](./images/Sem%20título.png)
 
 ## 🚀 Getting Started
 
