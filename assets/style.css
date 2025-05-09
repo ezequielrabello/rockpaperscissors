@@ -71,6 +71,7 @@ main {
     overflow-x: clip;
     height: 100vh;
     padding-top: 5rem;
+    
 }
 header {
     /* header style and position */
@@ -243,12 +244,13 @@ button.paper {
 .fight {
     /* results layout */
     display: grid;
-    grid-template-areas: 'user-choice house-choice''you-picked house-picked';
-    justify-content: space-between;
+    grid-template-areas: 'user-choice result house-choice''you-picked . house-picked';
+    justify-content: center;
+    
     gap: 3rem;
     width: 80%;
     margin: 4rem auto;
-    place-items: center;
+    
 }
 .user-choice {
     position: relative;
@@ -262,12 +264,14 @@ button.paper {
     font-weight: 700;
     color: var(--whiteColor);
     font-size: 1.5rem;
+    text-align: center;
 }
 .fight p.house-picked {
     grid-area: house-picked;
     font-weight: 700;
     color: var(--whiteColor);
     font-size: 1.5rem;
+    text-align: center;
 }
 .house-choice {
     grid-area: house-choice;
@@ -368,6 +372,7 @@ button.choice:focus-visible {
 
     .fight {
         grid-template-areas: 'user-choice result house-choice''you-picked . house-picked';
+        
     }
 
     .result {
@@ -381,6 +386,72 @@ button.choice:focus-visible {
     button.rock, button.paper, button.scissors {
         translate: -15%;
     }
+}
+@media screen and (max-width: 767px) {
+  header {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .scoreBox {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .buttons-group {
+    max-inline-size: 300px;
+    block-size: 300px;
+    background-size: contain;
+  }
+
+  .choice {
+    --circle-size: 100px;
+  }
+
+  button.rock {
+    inset-inline-start: 35%;
+    inset-block-start: 70%;
+  }
+
+  button.paper {
+    inset-inline-start: -5%;
+    inset-block-start: -5%;
+  }
+
+  button.scissors {
+    inset-inline-start: 75%;
+    inset-block-start: -5%;
+  }
+
+  .fight {
+    grid-template-areas: 
+      'user-choice . house-choice' 
+      'you-picked . house-picked' 
+      'result';
+    width: 90%;
+    gap: 3rem;
+    margin: 10rem auto;
+    justify-content: center;
+  }
+
+  #result-label {
+    font-size: 3rem;
+  }
+
+  .rulesBtn {
+    bottom: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .modalContainer {
+    width: 90%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .modal-close-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .fade-in {
